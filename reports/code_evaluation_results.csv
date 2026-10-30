@@ -1,0 +1,6 @@
+test_case,expected,actual,status,error
+Basic pair,"[0, 1]","[0, 1]",Passed,
+Pair in the middle,"[1, 2]","[1, 2]",Passed,
+Repeated number,"[0, 1]","[0, 1]",Passed,
+Negative numbers,"[2, 4]","[2, 4]",Passed,
+No matching pair,[],[],Passed,
