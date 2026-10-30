@@ -1,0 +1,27 @@
+
+# Core data processing
+numpy
+pandas
+
+# Visualization
+matplotlib
+seaborn
+
+# Jupyter Notebook
+jupyter
+notebook
+ipykernel
+
+# Machine Learning
+scikit-learn
+
+# Code analysis
+radon
+
+# Dataset handling
+requests
+tqdm
+
+# Testing and code quality
+pytest
+pytest-cov
