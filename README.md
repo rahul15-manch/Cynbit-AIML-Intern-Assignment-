@@ -9,7 +9,13 @@ An AI-powered Python code evaluation system that combines <b>AST-based code anal
 <p>
 This project has been developed as a proof of concept, taking inspiration from the functionalities and vision of <strong>Cynbit Studio</strong>, with a focus on AI-powered Python code evaluation, analysis, and personalized learning feedback.
 </p>
+<h2>Live Demo</h2>
 
+<p>
+  <a href="https://nyc3dybo4c3ttxtwwvwxsf.streamlit.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Launch-Live%20App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Launch Live App"/>
+  </a>
+</p>
 <h2>Tech Stack</h2>
 
 | Category | Tools |
