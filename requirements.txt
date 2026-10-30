@@ -29,3 +29,5 @@ pytest-cov
 # LLM Integration 
 groq 
 python-dotenv
+
+streamlit 

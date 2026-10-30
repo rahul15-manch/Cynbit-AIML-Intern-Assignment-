@@ -1,4 +1,18 @@
+"""Test runner supporting both legacy trusted function calls and isolated sandboxed execution."""
+
+from typing import Any, Dict, List
+from .sandbox_runner import (
+    execute_sandboxed_tests,
+    check_sandbox_availability,
+    summarize_results,
+)
+
+
 def run_test_cases(solution_function, test_cases):
+    """
+    Legacy in-process runner for locally authored, trusted functions only.
+    DO NOT use this for untrusted user-submitted code; use execute_sandboxed_tests instead.
+    """
     results = []
     for case in test_cases:
         name = case.get("name", "Unnamed test")
@@ -25,17 +39,10 @@ def run_test_cases(solution_function, test_cases):
             })
     return results
 
-def summarize_results(results):
-    total = len(results)
-    passed = sum(row["status"] == "Passed" for row in results)
-    failed = sum(row["status"] == "Failed" for row in results)
-    errors = sum(row["status"] == "Error" for row in results)
-    return {
-        "total_test_cases": total,
-        "passed": passed,
-        "failed": failed,
-        "errors": errors,
-        "pass_rate": round(passed / total * 100, 2) if total else 0.0,
-        "results": results,
-    }
 
+__all__ = [
+    "run_test_cases",
+    "summarize_results",
+    "execute_sandboxed_tests",
+    "check_sandbox_availability",
+]
