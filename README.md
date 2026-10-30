@@ -169,3 +169,27 @@ Create a .env file in the project root:
 GROQ_API_KEY=your_groq_api_key
 ```
 <b>Keep your API key private. Do not commit .env to GitHub.</b>
+## Running the Project
+
+Option 1: Jupyter Notebooks
+Start Jupyter Notebook:
+```text
+jupyter notebook
+```
+Explore the notebooks in the notebooks/ directory.
+
+Option 2: Python Pipeline
+
+Run the pipeline as a package from the project root:
+```text 
+python -m pipeline.main
+```
+The pipeline modules can also be imported into other Python scripts.
+
+Option 3: Streamlit Dashboard
+
+Run:
+```text
+streamlit run app.py
+```
+The dashboard will open in your browser.
