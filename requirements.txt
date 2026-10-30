@@ -25,3 +25,7 @@ tqdm
 # Testing and code quality
 pytest
 pytest-cov
+
+# LLM Integration 
+groq 
+python-dotenv
