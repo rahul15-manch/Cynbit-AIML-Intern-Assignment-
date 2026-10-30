@@ -21,3 +21,70 @@ This project has been developed as a proof of concept, taking inspiration from t
 | **Dashboard** | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white) |
 | **Analysis & Testing** | ![Python AST](https://img.shields.io/badge/Python%20AST-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white) ![Radon](https://img.shields.io/badge/Radon-4B5563?style=for-the-badge) |
 | **Utilities** | ![Joblib](https://img.shields.io/badge/Joblib-2E8B57?style=for-the-badge) ![Requests](https://img.shields.io/badge/Requests-24292E?style=for-the-badge) ![TQDM](https://img.shields.io/badge/TQDM-FFC107?style=for-the-badge&logoColor=black) ![python-dotenv](https://img.shields.io/badge/python--dotenv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black) |
+
+
+## Project Structure
+
+```text
+AI-Powered-Python-Code-Evaluator/
+│
+├── AI Opportunity Report.pdf
+├── README.md
+├── app.py
+├── requirements.txt
+│
+├── leetcode-dataset/
+│   ├── LICENSE
+│   ├── README.md
+│   ├── data/
+│   │   └── solutions.csv
+│   └── dataset-metadata.json
+│
+├── notebooks/
+│   ├── code_evaluator.ipynb
+│   ├── leetcode_exploration.ipynb
+│   └── model_training.ipynb
+│
+├── pipeline/
+│   ├── __init__.py
+│   ├── ai_feedback.py
+│   ├── code_analyzer.py
+│   ├── data_loader.py
+│   ├── dataloader.py
+│   ├── main.py
+│   ├── ml_detector.py
+│   ├── sandbox_runner.py
+│   └── test_runner.py
+│
+└── reports/
+    ├── anomaly_detection_results.csv
+    ├── code_evaluation_results.csv
+    ├── isolation_forest_model.joblib
+    ├── leetcode_features.csv
+    └── qwen_code_feedback.txt
+```
+## Pipeline Architecture
+
+```mermaid
+
+flowchart TD
+    A["Python Source Code"] --> B["AST Code Analyzer"]
+    B --> C{"Syntax Valid?"}
+
+    C -->|No| D["Syntax Error Report"]
+    C -->|Yes| E["Structural Feature Extraction"]
+
+    E --> F["Isolation Forest Detector"]
+    E --> G["Test Case Runner"]
+
+    F --> H["Anomaly Detection Result"]
+    G --> I["Functional Evaluation Results"]
+
+    H --> J["Evaluation Summary"]
+    I --> J
+
+    J --> K["Qwen AI Feedback via Groq"]
+    K --> L["Code Explanation & Improvement Suggestions"]
+
+    L --> M["Streamlit Dashboard"]
+```
